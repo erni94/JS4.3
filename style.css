@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.search-bar {
+    width: 30%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+.search-bar:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px 2px lightblue;
+}
+
+.autocomplete-items {
+    width: 30%;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.autocomplete-items p {
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.autocomplete-items p:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-items p:hover {
+    background-color: lightblue;
+}
+
+.repo-list {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.repo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.repo-info p {
+    color: #333;
+}
+
+.repo-info p strong {
+    color: #007BFF;
+}
+
+.delete-btn {
+    cursor:pointer;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.delete-btn img {
+    height: 100%;
+}
+
+.delete-btn:hover {
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+
