@@ -58,7 +58,9 @@ const debouncedSearch = debounce(async (input) => {
 
 document.querySelector('.search-bar').addEventListener('keyup', function (e) {
     const input = e.target.value;
-    debouncedSearch(input);
+    if(input.trim() !== '') {
+        debouncedSearch(input);
+    }
 });
 
 document.querySelector('.autocomplete-items').addEventListener('click', function(e){
@@ -71,7 +73,8 @@ document.querySelector('.autocomplete-items').addEventListener('click', function
 })
 
 document.querySelector('.repo-list').addEventListener('click', function(e){
-    if(e.target.classList.contains('delete-btn')){
-        e.target.parentElement.remove()
+    if(e.target.classList.contains('delete-btn') || e.target.tagName === 'IMG'){
+        e.target.closest('.repo-item').remove()
     }
 })
+
